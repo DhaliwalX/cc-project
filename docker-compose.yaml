@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+    vault:
+        image: vault
+        ports:
+            - "8200:8200"
+        command: server -dev
+    vault-ui:
+        image: djenriquez/vault-ui
+        ports:
+            - "80:8000"
+        environment:
+            VAULT_URL_DEFAULT=http://vault:8200
+
