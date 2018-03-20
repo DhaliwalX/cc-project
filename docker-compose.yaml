@@ -11,5 +11,5 @@ services:
         ports:
             - "80:8000"
         environment:
-            VAULT_URL_DEFAULT=http://vault:8200
+            VAULT_URL_DEFAULT: http://vault:8200
 
